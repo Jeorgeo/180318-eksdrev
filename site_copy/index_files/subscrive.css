@@ -1,0 +1,215 @@
+.subscribe {
+    border: medium none;
+ /*   max-width: 900px;*/
+	width:100%;
+}
+.zvonok .text-primary {
+    font-family: "Roboto",sans-serif;
+	font-size: 34px;
+	line-height: 25px;
+    text-align: center;
+	padding-bottom: 15px;
+}
+.zvonok .heading-5 {
+	color: #ffffff;
+    font-family: "Roboto",sans-serif;
+	font-size: 24px;
+    text-align: center;
+}
+.zvonok .rd-mailform {
+	margin: 0 auto;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+.zvonok button {
+	background: #e5d55b none repeat scroll 0 0;
+	border-width: 0;
+    font-size: 20px;
+    font-weight: 400;
+	line-height: 24px;
+	padding: 5px 0px 6px 0px;
+    text-transform: uppercase;
+	width:100%;
+}
+.zvonok button::hover {
+	background: #000;
+}
+.zvonok label {
+    width: 95%;
+}
+.zvonok label input, .zvonok label textarea {
+	background: #fff none repeat scroll 0 0;
+    border: 1px solid #907e71;
+    font-size: 20px;
+    line-height: 28px;
+    margin: 0;
+	padding: 9px 18px;
+    width: 100%;
+}
+.zvonok .mfPlaceHolder {
+	font-size: 16px;
+	line-height: 24px;
+	padding: 5px 18px 0px 18px;
+	font-style: italic;
+}
+.gagag01 {	height: 35px;}
+
+/*kak sdelat*/
+.featured-thumbnail {
+    position: relative;
+    margin: 5px 0px 10px 0;
+}
+
+.featured-thumbnail, .thumbnail {
+    background: none;
+    border-radius: 20px;
+    padding: 0;
+    box-shadow: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+.zxz12 {
+    top: 0px;
+    right: 15%;
+    position: absolute;
+}
+
+.featured-thumbnail img, .thumbnail img, figure.frame img {
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    background: none;
+    box-sizing: border-box;
+}
+.frame2 img {
+    overflow: hidden;
+    border-radius: 50% !important;
+}
+.frame3 img {
+    overflow: hidden;
+    border-radius: 10px !important;
+}
+.thumbnail > img {
+    display: block;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.clear, .clearboth {
+    clear: both;
+}
+
+.zxz07 {
+	font-family: Arial;
+    font-size: 24px;
+    text-align: center;
+	 color: #333;
+}
+
+.zxz18 {
+	color: #000 !important;
+/*	margin: 0 5px;*/
+    padding: 10px 0px 0 0px !important;
+	 text-align: center;
+}
+
+.zxz19 {
+    top: 45px;
+    left: 0%;
+    margin-left: -30px;
+    position: absolute;
+}
+
+figure i.circle.green {
+    background: #449cc4;
+}
+figure i.circle.red {
+    background: #ffa800;
+}
+figure i.circle {
+    display: inline-block !important;
+    width: 51px;
+    height: 51px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 54px;
+}
+.zxz05 {
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+}
+
+
+.zxz06 {
+	background: #e5d55b none repeat scroll 0 0;
+	padding: 7px 30px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.text-sm-left p {
+    color: #fff;
+    font-family: Arial;
+    font-size: 14px;
+	font-weight: 400;
+    line-height: 25px;
+}
+.zvonok .well-lg {
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.big.inset-1 {
+    font-size: 16px;
+}
+.bg-gradient-overlay-1.text-sm-left p {
+    font-size: 16px;
+}
+
+
+/*Otzivi*/
+
+/*.otzivi {
+    padding-bottom: 20px;
+    padding-top: 20px;
+}*/
+blockquote {
+    background: #fefae1 none repeat scroll 0 0;
+    border: 1px solid #e5e6e7;
+    padding: 40px 25px;
+    text-align: left;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote q::before {
+    color: #ffa800;
+    content: "\"";
+    display: inline;
+    font-family: "Roboto",sans-serif;
+    font-size: 104px;
+    line-height: 0;
+    margin-right: 10px;
+    vertical-align: bottom;
+}
+blockquote .box {
+	margin-top: 12px;
+}
+blockquote .box > .box__left {
+    padding-bottom: 0;
+    padding-right: 20px;
+}
+.otzivi h5 {
+    font-size: 24px;
+    line-height: 1.66;
+}
+blockquote small {
+    color: #333333;
+	font-size: 14px;
+	line-height: 25px;
+}
+blockquote .primary-color {
+    color: #449cc4;
+}

@@ -1,0 +1,140 @@
+.sitetop {
+    max-height: 488px;
+    top: 73px;
+	padding: 0;
+}
+h1 {
+    font-size: 34px;
+    line-height: 40px;
+}
+.sitetop p {
+color: #bbc2c7;
+}
+.box.box-inset.bg-contrast {
+/*	border: 2px solid;*/
+height:380px;
+    text-align: center;
+}
+.pochemu {
+	background: rgba(0, 0, 0, 0) url("../img/texture_2.jpg") repeat scroll 0 0;
+}
+.pochemu h2 {
+	font-size: 20px;
+}
+.pochemu .col-md-3.col-sm-6.col-xs-12 > p {
+	font-size: 16px;
+	lie-height: 24px;
+}
+.pochemu .col-md-3.col-sm-6.col-xs-12 {
+	text-align: center;
+}
+
+.categor {
+    background: #735756 none repeat scroll 0 0;
+}
+
+.categor .text-white {
+    font-size: 20px;
+    line-height: 25px;
+}
+.categor .text1 p {
+    font-size: 16px;
+	line-height: 20px;
+}
+.text-primary.offset-6 {
+    padding-bottom: 0;
+}
+.onas .inset-2 {
+    padding: 0;
+}
+.well-md.pochemu.nashiklienti h2 {
+    color: #515557;
+    font-size: 36px;
+    line-height: 40px;
+	padding-bottom: 20px;
+    text-align: center;
+}
+.oplata .offset-2 {
+    margin-top: 0;
+}
+
+.nashiklienti .sacac58 {
+    margin-left: 90px;
+    margin-right: 90px;
+}
+.bg-2.well-xl.z-index-2.sacac100 {
+    padding-bottom: 0;
+    padding-top: 0;
+}
+.oplata h2 {
+    color: #fff;
+    padding-bottom: 10px;
+}
+.onas .text-primary {
+    margin-top: 20px;
+}
+
+.pochemu.kaksdelat h2 {
+    color: #240b0f;
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+}
+.kaksdelat .row.offset-2.flow-offset-3 {
+    margin-top: 20px;
+}
+.container.bord {
+/*    border: 4px solid #ffe11c;*/
+}
+.container.bord .border1 {
+    border: none;
+}
+.border1.inset-2.postfix-1.preffix-1.offset-4 > img {
+ /*   height: 280px;*/
+	width: 100%;
+}
+.pochemu .index-list > li h2 {
+    margin-top: 10px;
+}
+.pochemu .index-list > li p {
+    margin-top: 0;
+}
+.border1.inset-2.postfix-1.preffix-1.offset-4 > h4 {
+    color: #240b0f;
+}
+
+.topform .rd-mailform {
+    margin-top: 0;
+}
+.topform fieldset {
+    text-align: center;
+}
+.topform .btn {
+    margin: 20px 0;
+	padding: 9px 31px;
+}
+.topform .mfInput > input {
+    padding: 5px 40px;
+}
+.topform .rd-mailform label {
+    padding: 0 20px;
+	margin-top: 20px;
+}
+.topform > h4 {
+	font-size: 32px;
+	line-height: 48px;
+    padding-top: 20px;
+}
+.topform .mfPlaceHolder {
+	padding: 9px 40px 22px;
+}
+.page-header-top .well-md {
+    padding-bottom: 80px;
+    padding-top: 40px;
+}
+.onas .border1 {
+    border: medium none;
+}
+.car1 {
+    padding: 0 15px;
+}

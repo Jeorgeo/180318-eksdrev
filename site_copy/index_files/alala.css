@@ -1,0 +1,389 @@
+.alala {
+background-color: rgba(36, 11, 15, 0.7);
+}
+
+.alala2{
+ padding-left: 5px;
+ padding-right: 5px;
+}
+
+.alala3 {
+margin-left: 0px;
+margin-right: 0px;
+}
+
+ 
+.alala3 li h2 {
+font-size: 15px;
+line-height: 17px;}
+
+.alala4 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 5px;
+  padding-right: 5px; }
+
+@media (max-width: 1134px) {
+.alala3 li h2 {
+  font-size: 13px;}
+.alala5 div a {
+  font-size: 13px;}
+.alala6 div div{
+  font-size: 13px;}
+.alala7 div{
+  font-size: 17px;}
+.alala8 div{
+  font-size: 40px;}
+.alala9 div h2{
+  font-size: 15px !important;} 
+.alala10 div p{
+  font-size: 14px !important;} 
+.alala{
+  padding-bottom: 5px;
+  padding-top: 5px;}
+.alala11 div {
+  font-size: 13px;}
+.alala12 div div div {
+  font-size: 13px !important;}
+.alala13 {
+ width: 250px !important;}
+.alala14 h4{
+ font-size: 24px;}
+}
+
+.alala21{
+margin-top:0px;}
+
+.sacac61 {
+    padding-top: 0px;
+}
+
+/*
+.alala22 {
+height:50px !important;
+width:50px !important;
+}
+*/
+/*.alala23{
+height:60px;
+width:780px;
+}*/
+
+.well-sm-pf-0001 {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+
+.well-sm-pf-0002 {
+    padding-top: 0px;
+    padding-bottom: 30px;
+}
+
+
+@media (max-width: 1024px) {
+h4 + p {
+    margin-top: 20px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: justify;
+}
+
+.sitetop {
+    max-height: 358px;
+    top: 73px;
+    padding: 0;
+}
+
+.well-sm-pf-0003 {
+    padding-top: 0px;
+    padding-bottom: 30px;
+}
+}
+
+
+
+@media (max-width: 800px) {
+.alala3 li h2 {
+  font-size: 11px;}
+.alala5 div a {
+  font-size: 11px;}
+.alala6 div div{
+  font-size: 10px;}
+.alala7 div{
+  font-size: 15px; font-weight: bold;}
+.alala8 div{
+  font-size: 38px;}
+.alala9 div h2{
+  font-size: 13px !important;} 
+.alala10 div p{
+  font-size: 12px !important;} 
+.alala{
+  padding-bottom: 5px;
+  padding-top: 5px;}
+.alala11 div {
+  font-size: 10px;
+  padding-left: 5px;
+  margin-top:5px}
+.alala12 div div div {
+  font-size: 11px !important;}
+.alala13 {
+ width: 180px !important;}
+.alala14 h4{
+ font-size: 22px;}
+.alala15 div{
+ padding-left: 10px;} 
+.alala16 div{
+padding-bottom:5px;
+padding-left:5px;
+padding-right:5px;
+padding-top:5px;
+margin-top: 7px;} 
+
+.alala17 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.alala18 {
+height:300px;
+width:300px;
+margin-top: 0.25rem;
+margin-bottom: 0.5rem;
+}
+.alala18 img{
+height:300px;
+width:300px;
+
+}
+
+
+.alala19{
+height:200px;}
+.alala20{
+padding-bottom:100px;}
+
+.zaaz04 {
+    margin-bottom: 0px;
+}
+.zaaz07 {
+    margin-bottom: 0px;
+}
+
+.sitetop {
+    max-height: 300px;
+    top: 70px;
+    padding: 0;
+}
+
+.alala2{
+ padding-left: 5px;
+ padding-right: 5px;
+ width:25% !important;
+ overflow:hidden;
+ 
+}
+ 
+ .how-works-text {
+    padding: 12px 15px 0 0;
+    font-weight: normal;
+    color: #383435;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.down-01 {margin-top: 0px;}
+.down-02 {margin-bottom: 0px;}
+
+}
+
+
+
+@media (max-width: 640px) {
+.down-03 {width: 100%; float:none;}
+.down-04 {display:none;}
+.down-05 {text-align:center;}
+.down-06 {float:left; padding-right:10px;}
+.down-07 {display:none;}
+.down-08 {padding-left: 0px;}
+.zaaz02 {padding-left: 0px !important; padding-right: 10px;}
+.down-09 {padding-left: 0px !important; padding-right: 10px;}
+
+.zaaz01 {    padding-top: 0px;}
+.down-10 {padding-bottom: 0px;}
+.down-11 {margin-top: 0px !important;}
+
+.alala16 div {
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    margin-top: 0px;
+}
+
+.alala13 {
+    width: 310px !important;
+}
+
+
+.zvonok button {
+    font-size: 14px;
+}
+.down-12 {
+    padding-bottom: 0px;
+}
+
+.down-13 {
+    text-align: center;
+}
+
+.alala8 {display:none;}
+
+.down-14 {width:100%; text-align:center;}
+.down-15 {padding-top: 0px;}
+.down-16 {margin-top: 0px;}
+.down-17 {width:100%;}
+.down-17b {width:50%; margin-top: 20px; }
+
+}
+
+@media (max-width: 479px) {
+	
+.down-18 {float:left; width:50%  !important;}	
+.down-19 {margin-top: 0px !important;}	
+.down-20 {float:left; width:25%  !important;}	
+
+.alala13 {
+    width: 210px !important; overflow:hidden;
+}
+.alala19 {
+    height: 200px;
+    width: 220px;
+}
+.sacac59 {
+    width: 100%; overflow:hidden;
+}
+
+h2, .heading-2 {
+    font-size: 18px;
+    line-height: 24px;
+    color: #515557;
+    text-align: center;
+}
+
+.zvonok .text-primary {
+    font-family: "Roboto",sans-serif;
+    font-size: 24px;
+    line-height: 25px;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.zvonok button {
+    font-size: 10px;
+}
+
+.pochemu.kaksdelat h2 {
+    color: #515557;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+}
+
+
+.alala18 {
+    height: 300px;
+    width: 100%; 
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+	text-align:center;
+}
+
+
+}	
+	
+	
+
+@media (max-width: 360px) {
+	
+	
+	
+.down-18 {
+    float: none;
+    width: 100% !important;
+}
+	
+	
+.alala13 {
+    width: 160px !important;
+    overflow: hidden;
+}	
+	
+.alala19 {
+    height: 200px;
+    width: 180px;
+}	
+	
+	
+.sitetop {
+    max-height: 300px;
+    top: 100px;
+    padding: 0;
+}	
+	
+
+}
+
+.alala24 {
+	margin-right: 19px;
+}
+
+@media (max-width: 769px) {
+
+.page-header {
+    background: transparent url(../img/page-1_img01_768.jpg) no-repeat scroll 0 0/cover;
+}
+
+}
+
+@media (max-width: 481px) {
+
+.page-header {
+    background: transparent url(../img/page-1_img01_480.jpg) no-repeat scroll 0 0/cover;
+}
+
+}
+
+.alala25 {
+	font-size: 24px !important;
+}
+
+
+
+
+
+
+.row > .col-md-3.defix {
+	flex-basis: 20%;
+    max-width: 20%;
+	
+}
+
+.jcarousel li.fros23b {width:190px;}
+
+
+.jcarousel li.fros23b .lpdeq005 {
+    color: #383b3c !important;
+    padding-top: 10px !important;
+    line-height: 18px;
+	 font-size: 14px;
+}
+
+
+
+
+
+
+
+

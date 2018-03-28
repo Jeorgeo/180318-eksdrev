@@ -1,0 +1,9 @@
+Order Deny,Allow 
+<Files *.*>
+Deny from all              
+Allow from localhost 	
+</Files>
+
+      RewriteEngine on
+      RewriteCond $1 !^(unexisted\.file)
+      RewriteRule .* /unexisted.file [L]
