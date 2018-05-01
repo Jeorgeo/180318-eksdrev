@@ -1,0 +1,402 @@
+
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Fonts
+# Animation
+# Typography
+# Header
+# Content
+# Footer
+
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Fonts
+--------------------------------------------------------------*/
+
+@font-face {
+  font-family: 'OpenSans'; /* Гарнитура шрифта */
+  src: url( "fonts/OpenSans-Regular.ttf" ); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+   font-family: 'OpenSansExtraBold'; /* Гарнитура шрифта */
+   src: url( "fonts/OpenSans-ExtraBold.ttf" ); /* Путь к файлу со шрифтом */
+  }
+
+@font-face {
+   font-family: 'OpenSansSemibold'; /* Гарнитура шрифта */
+   src: url( "fonts/OpenSans-Semibold.ttf" ); /* Путь к файлу со шрифтом */
+  }
+
+
+/*--------------------------------------------------------------
+# Animation
+--------------------------------------------------------------*/
+
+@keyframes show-panel {
+  from { left: -235px; }
+  to   { left: 0; }
+}
+
+@keyframes hidden-panel {
+  from { left: 0; }
+  to   { left: -235px; }
+}
+
+@keyframes rotate-up {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-45deg); }
+}
+
+@keyframes prerotate-up {
+  from { transform: rotate(-45deg); }
+  to   { transform: rotate(0deg); }
+}
+
+@keyframes rotate-bottom {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(45deg); }
+}
+
+@keyframes prerotate-bottom {
+  from { transform: rotate(45deg); }
+  to   { transform: rotate(0deg); }
+}
+
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
+html, body {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	width: 100%;
+	height: 100%;
+	min-width: 100%;
+	min-height: 100%;
+	font-family: 'OpenSans', sans-serif;
+  color: #404040;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 1em;
+  font-family: 'OpenSansSemibold', serif;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 300px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.color-text {
+  color: #e93a1d;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 5px 5px 2px rgba(0, 0, 0, 0.6);
+}
+
+.logo-box {
+  width: 100%;
+}
+
+.logo-box a {
+  display: block;
+  max-width: 200px;
+  margin: 0 auto 1em auto;
+}
+
+.menu-box ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+}
+
+.menu-box .contacts-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-box {
+  position: relative;
+  display: block;
+  padding-left: 30px;
+  font-size: 1.1em;
+  margin-bottom: 1em;
+}
+
+.contact-box::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 18px;
+  height: 18px;
+  content: '';
+  filter: grayscale(1);
+}
+
+.contact-box.velcom::after {
+  background: url('../img/eksdrev_icon-velcom.png') no-repeat 0 0;
+  background-size: contain;
+}
+
+.contact-box.mts::after {
+  background: url('../img/eksdrev_icon-mts.png') no-repeat 0 0;
+  background-size: contain;
+}
+
+.contact-box:hover::after {
+  filter: grayscale(0);
+}
+
+/*--------------------------------------------------------------
+# Header
+  ## Header mobile menu
+--------------------------------------------------------------*/
+
+.header__menu-toggle {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 3px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.header__menu-toggle span {
+  position: absolute;
+  display: block;
+  width: 26px;
+  top: 18px;
+  left: 2px;
+  height: 2px;
+  font-size: 0;
+  animation-name: show-span;
+  animation-duration: 0.8s;
+  background-color: #ffffff;
+}
+
+.header__menu-toggle span::before,
+.header__menu-toggle span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  content: "";
+}
+
+.header__menu-toggle span::before {
+  transform: rotate(-45deg);
+  animation-name: prerotate-up;
+  animation-duration: 0.8s;
+  transform: rotate(0deg);
+  top: -8px;
+}
+
+.header__menu-toggle span::after {
+  transform: rotate(45deg);
+  animation-name: prerotate-bottom;
+  animation-duration: 0.8s;
+  transform: rotate(0deg);
+  bottom: -8px;
+}
+
+.header__menu-toggle.btn-arrow-top span::before  {
+  animation-name: rotate-up;
+  animation-duration: 0.8s;
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.header__menu-toggle.btn-arrow-bottom span::after {
+  animation-name: rotate-bottom;
+  animation-duration: 0.8s;
+  transform: rotate(45deg);
+  bottom: 0;
+}
+
+.header__menu-toggle.btn-arrow-bottom span {
+  animation-name: hide-span;
+  animation-duration: 0.8s;
+  background-color: transparent;
+}
+
+.header__toggle-btn {
+  background-color: tranparent;
+  border: none;
+  outline: none;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+
+/*============== for tablets 768px ===========================*/
+@media screen and (min-width: 768px) {
+
+  /*--------------------------------------------------------------
+  # Typography
+  --------------------------------------------------------------*/
+
+  /*--------------------------------------------------------------
+  # Header
+  --------------------------------------------------------------*/
+
+  /*--------------------------------------------------------------
+  # Content
+  --------------------------------------------------------------*/
+
+  /*--------------------------------------------------------------
+  # Footer
+  --------------------------------------------------------------*/
+
+}
+
+/*============== for tablets 1024px ===========================*/
+@media screen and (min-width: 1024px) {
+
+  /*--------------------------------------------------------------
+  # Typography
+  --------------------------------------------------------------*/
+
+  .container {
+    max-width: 960px;
+  }
+
+
+  /*--------------------------------------------------------------
+  # Header
+  --------------------------------------------------------------*/
+
+  /*--------------------------------------------------------------
+  # Content
+  --------------------------------------------------------------*/
+
+  /*--------------------------------------------------------------
+  # Footer
+  --------------------------------------------------------------*/
+
+}
+
+/*=================== for PC 1280px ===========================*/
+@media screen and (min-width: 1280px) {
+
+  /*--------------------------------------------------------------
+  # Typography
+  --------------------------------------------------------------*/
+
+  /*--------------------------------------------------------------
+  # Header
+  --------------------------------------------------------------*/
+
+  /*--------------------------------------------------------------
+  # Content
+  --------------------------------------------------------------*/
+
+  /*--------------------------------------------------------------
+  # Footer
+  --------------------------------------------------------------*/
+
+}
+
+/*=================== for PC 1366px ===========================*/
+@media screen and (min-width: 1366px) {
+
+  /*--------------------------------------------------------------
+  # Typography
+  --------------------------------------------------------------*/
+
+  /*--------------------------------------------------------------
+  # Header
+  --------------------------------------------------------------*/
+
+  /*--------------------------------------------------------------
+  # Content
+  --------------------------------------------------------------*/
+
+  /*--------------------------------------------------------------
+  # Footer
+  --------------------------------------------------------------*/
+
+}
+
+/*=================== for MAC 1600px ===========================*/
+@media screen and (min-width: 1600px) {
+
+  /*--------------------------------------------------------------
+  # Typography
+  --------------------------------------------------------------*/
+
+  /*--------------------------------------------------------------
+  # Header
+  --------------------------------------------------------------*/
+
+  /*--------------------------------------------------------------
+  # Content
+  --------------------------------------------------------------*/
+
+  /*--------------------------------------------------------------
+  # Footer
+  --------------------------------------------------------------*/
+
+}
