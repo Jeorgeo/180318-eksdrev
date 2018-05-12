@@ -1,0 +1,1038 @@
+
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Fonts
+# Animation
+# Typography
+# Header
+# Content
+# Footer
+
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Fonts
+--------------------------------------------------------------*/
+
+@font-face {
+  font-family: 'Exo2-Bold'; /* Гарнитура шрифта */
+  src: url( "fonts/Exo2-Bold.ttf" ); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+   font-family: 'Exo2-Regular'; /* Гарнитура шрифта */
+   src: url( "fonts/Exo2-Regular.ttf" ); /* Путь к файлу со шрифтом */
+  }
+
+@font-face {
+   font-family: 'Exo2-Light'; /* Гарнитура шрифта */
+   src: url( "fonts/Exo2-Light.ttf" ); /* Путь к файлу со шрифтом */
+  }
+
+@font-face {
+   font-family: 'Exo2-ExtraLightItalic'; /* Гарнитура шрифта */
+   src: url( "fonts/Exo2-ExtraLightItalic.ttf" ); /* Путь к файлу со шрифтом */
+  }
+
+
+/*--------------------------------------------------------------
+# Animation
+--------------------------------------------------------------*/
+
+@keyframes show-panel {
+  0% { bottom: 160px; }
+  80% { bottom: -230px; }
+  100% { bottom: -210px; }
+}
+
+@keyframes hidden-panel {
+  from { bottom: -210px; }
+  to   { bottom: 160px; }
+}
+
+@keyframes rotate-up {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-45deg); }
+}
+
+@keyframes prerotate-up {
+  from { transform: rotate(45deg);
+         top: 0; }
+  to   { transform: rotate(0deg);
+         top: 0; }
+}
+
+@keyframes rotate-bottom {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(45deg); }
+}
+
+@keyframes prerotate-bottom {
+  from { transform: rotate(-45deg);
+         bottom: 0; }
+  to   { transform: rotate(0deg);
+         bottom: 0; }
+}
+
+@keyframes swell {
+  from { width: 98%;
+  box-shadow: 0 0 0 0 #404040; }
+  to   { width: 100%;
+  box-shadow: 0 0 3px 1px #404040; }
+}
+
+@keyframes deflate {
+  from { width: 100%;
+  box-shadow: 0 0 3px 1px #404040; }
+  to   { width: 98%;
+  box-shadow: 0 0 0 0 #404040; }
+}
+
+@keyframes swell-r {
+  from { max-width: 100%; }
+  to   { max-width: 110%; }
+}
+
+@keyframes deflate-r {
+  from { max-width: 110%; }
+  to   { max-width: 100%; }
+}
+
+@keyframes rotate-up1 {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-180deg); }
+}
+
+@keyframes prerotate-up1 {
+  from { transform: rotate(-180deg); }
+  to   { transform: rotate(0deg); }
+}
+
+@keyframes show-popup {
+  from { opacity: 0;}
+  to   { opacity: 1; }
+}
+
+@keyframes hide-popup {
+  from { opacity: 1;}
+  to   { opacity: 0; }
+}
+
+@keyframes coloring {
+  from { filter: grayscale(1);}
+  to   { filter: grayscale(0);}
+}
+
+@keyframes decoloring {
+  from { filter: grayscale(0);}
+  to   { filter: grayscale(1);}
+}
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
+html, body {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	width: 100%;
+	height: 100%;
+	min-width: 100%;
+	min-height: 100%;
+	font-family: 'Exo2-Regular', 'Arial', sans-serif;
+  color: #000000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 1em;
+  font-family: 'Exo2-Bold', serif;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.color-text {
+  color: #e93a1d;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 5px 5px 2px rgba(0, 0, 0, 0.8);
+}
+
+.logo-box {
+  position: relative;
+  z-index: 99998;
+  width: 100%;
+}
+
+.logo-box a {
+  display: block;
+  max-width: 240px;
+  margin: 0 auto 1em 1.8em;
+}
+
+.contacts-box {
+  position: relative;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts-box {
+  padding: 0 0 0 2em;
+}
+
+.contact-box:hover {
+  color: #e93a1d;
+}
+
+.contact-box {
+  position: relative;
+  display: block;
+  padding-left: 30px;
+  padding-right: 50px;
+  font-size: 1.1em;
+  margin-bottom: 1em;
+}
+
+.contact-box::after {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  display: block;
+  width: 18px;
+  height: 18px;
+  content: '';
+  filter: grayscale(1);
+}
+
+.contact-box::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: url('img/eksdrev_icon-phone.png') no-repeat 0 0;
+  background-size: contain;
+  content: '';
+}
+
+.contact-box.velcom::after {
+  background: url('img/eksdrev_icon-velcom.png') no-repeat 0 0;
+  background-size: contain;
+}
+
+.contact-box.mts::after {
+  background: url('img/eksdrev_icon-mts.png') no-repeat 0 0;
+  background-size: contain;
+}
+
+.contact-box.email::after {
+  background: url('img/eksdrev_icon-mail.png') no-repeat 0 0;
+  background-size: contain;
+}
+
+.contact-box:hover::after {
+  filter: grayscale(0);
+}
+
+/*--------------------------------------------------------------
+# Header
+  ## Header mobile menu
+--------------------------------------------------------------*/
+
+.menu-box {
+  position: absolute;
+  left: 0;
+  z-index: 991;
+  display: block;
+  width: 100%;
+  padding: 1em 1em 1em 3em;
+  padding-top: 150px;
+  color: #ffffff;
+  background-color: #000000;
+  box-sizing: border-box;
+  animation-name: hidden-panel;
+  animation-duration: 0.7s;
+  bottom: 160px;
+}
+
+.menu-box li {
+  margin: 1em auto;
+  font-size: 1.1em;
+}
+
+.menu-box li a:hover,
+.menu-box li a:active {
+  color: #e93a1d;
+}
+
+.header__menu-toggle {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  z-index: 99999;
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 3px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.header__menu-toggle span {
+  position: absolute;
+  display: block;
+  width: 26px;
+  top: 18px;
+  left: 2px;
+  height: 2px;
+  font-size: 0;
+  animation-name: show-span;
+  animation-duration: 0.8s;
+  background-color: #ffffff;
+}
+
+.header__menu-toggle span::before,
+.header__menu-toggle span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  content: "";
+}
+
+.header__menu-toggle span::before {
+  transform: rotate(-45deg);
+  animation-name: prerotate-up;
+  animation-duration: 0.8s;
+  transform: rotate(0deg);
+  top: -8px;
+}
+
+.header__menu-toggle span::after {
+  transform: rotate(45deg);
+  animation-name: prerotate-bottom;
+  animation-duration: 0.8s;
+  transform: rotate(0deg);
+  bottom: -8px;
+}
+
+.header__menu-toggle .btn-arrow-top span::before  {
+  animation-name: rotate-up;
+  animation-duration: 0.8s;
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.header__menu-toggle .btn-arrow-bottom span::after {
+  animation-name: rotate-bottom;
+  animation-duration: 0.8s;
+  transform: rotate(45deg);
+  bottom: 0;
+}
+
+.header__menu-toggle .btn-arrow-bottom span {
+  animation-name: hide-span;
+  animation-duration: 0.8s;
+  background-color: transparent;
+}
+
+.header__toggle-btn {
+  background-color: tranparent;
+  border: none;
+  outline: none;
+}
+
+.nav-show {
+  animation-name: show-panel;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-out;
+  bottom: -210px;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+main {
+
+}
+
+.main {
+  padding-top: 150px;
+  background: #000000;
+}
+
+.main.block-1 {
+  padding-bottom: 1.5em;
+}
+
+.main .title-box {
+  min-height: 300px;
+  padding: 0 2em;
+  color: #ffffff;
+  background: url('img/eksdrev_bg-main-s.jpg') no-repeat 50% 25%;
+  background-size: contain;
+}
+
+.main .title-box h1 {
+  font-size: 1.5em;
+  text-align: left;
+  line-height: 1.2em;
+}
+
+.main .title-box h1 span{
+  display: block;
+  text-align: right;
+}
+
+.main .title-box p {
+  margin-top: 150px;
+  text-align: right;
+  font-size: 0.95em;
+  line-height: 1.5em;
+  font-family: 'Exo2-Light', 'Arial', cursive;
+}
+
+.order-btn,
+.production__product-btn,
+.order__form button {
+  position: relative;
+  z-index: 555;
+  display: block;
+  width: 100%;
+  margin: 2em auto;
+  padding: 1.5em;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: transparent;
+  box-sizing: border-box;
+  border: 1px solid #ffffff;
+}
+
+.production__product-btn:hover {
+  color: #ffffff;
+}
+
+.order-btn:active,
+.production__product-btn:active,
+.order__form button:active {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.order-btn::after,
+.production__product-btn::after,
+.order__form button::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #e93a1d;
+  animation-name: hide-popup;
+  animation-duration: 0.5s;
+  opacity: 0;
+  content: '';
+}
+
+.order-btn:hover::after,
+.production__product-btn:hover::after,
+.order__form button:hover::after {
+  animation-name: show-popup;
+  animation-duration: 0.5s;
+  opacity: 1;
+}
+
+.order-btn:active::after,
+.production__product-btn:active::after,
+.order__form button:active::after {
+  opacity: 0;
+}
+
+.production {
+  padding: 0;
+  background: url('img/eksdrev_bg-1-s.jpg') no-repeat 50% 0;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.production__cell {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 450px;
+}
+
+.production__advantage {
+  padding: 1em 2.3em;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.production__advantage p {
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 2em;
+  font-size: 1.1em;
+  color: #f4f4f2;
+}
+
+.production__product a {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.production__product figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 1.5em calc(20px + 2em);
+  text-align: right;
+  font-size: 1.2em;
+  background-color: rgba(255,255,255,0.4);
+  box-sizing: border-box;
+}
+
+.production__product figure h4 {
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+.production__product figure p {
+  margin: 1.5em 0 0 0;
+}
+
+.production__product-btn {
+  margin: 0.5em auto 1.5em auto;
+  border: 1px solid #000000;
+  background-color: rgba(0,0,0,0.2);
+}
+
+.order {
+  padding: 0.5em 0;
+}
+
+.order h3,
+.clients h3 {
+  display: block;
+  margin: 2em;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+
+.order li figure {
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin: 1em auto;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.order__list-title {
+  position: relative;
+  display: block;
+  width: 320px;
+  margin-left: calc(20px + 2em);
+  padding-left: 60px;
+}
+
+.order__list-title span {
+  font-size: 1.3em;
+}
+
+.order__list-title .order__list-title_number {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  margin-right: 1em;
+  font-size: 5em;
+  color: #c7c6c7;
+  font-family: 'Exo2-Bold', 'Arial', serif;
+  text-shadow: 1px 1px 6px #010104;
+}
+
+.order__list-desc {
+  display: block;
+  width: 100%;
+  max-width: 330px;
+  margin: 1em auto;
+  padding: 1em 2em;
+  font-size: 1.1em;
+  box-sizing: border-box;
+}
+
+.order .order__form,
+.partners .order__form,
+.materials .order__form {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0.5em calc(20px + 2em);
+  background-color: #000000;
+  box-sizing: border-box;
+}
+
+.order__form input {
+  display: block;
+  width: 100%;
+  margin: 2em auto;
+  padding: 0.8em;
+  font-size: 1.1em;
+  color: #ffffff;
+  background-color: #000000;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+}
+
+.order__form input:focus {
+  background-color: #c7c6c7;
+  color: #010104;
+}
+
+.order__form button {
+  color: #ffffff;
+}
+
+.clients {
+  padding-bottom: 1em;
+}
+
+.clients__client {
+  animation: decoloring;
+  animation-duration: 0.5s;
+  filter: grayscale(1);
+}
+
+.clients__client:hover {
+  animation: coloring;
+  animation-duration: 0.5s;
+  filter: grayscale(0);
+}
+
+.partners {
+  margin: 1.5em 0 0 0;
+}
+
+.partners .section-title {
+  margin: 0;
+  padding: 2em calc(2em + 20px);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.partners__box figure {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+
+.partners__box .shadow-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  z-index: 1;
+  width: calc(100% - 80px);
+  height: calc(100% - 80px);
+  padding: 1em;
+  font-size: 1.2em;
+  background-color: rgba(255, 255, 255, 0.4);
+  box-sizing: border-box;
+}
+
+.partners__box .shadow-box p {
+  padding-top: 3em;
+}
+
+.partners__box .shadow-box span {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  margin-right: 1em;
+  font-size: 5em;
+  color: #c7c6c7;
+  font-family: 'Exo2-Bold', 'Arial', serif;
+  text-shadow: 1px 1px 6px #010104;
+}
+
+.materials__slider {
+  width: 100%;
+  padding: 1.5em 0 0 0;
+  box-sizing: border-box;
+  background: url('img/eksdrev_bg-1-s.jpg') no-repeat 50% 0;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.materials__slider .materials__slider-box {
+  display: block;
+  width: 75%;
+  margin: 1.5em auto;
+}
+
+.materials__slider figure {
+  margin: 0;
+}
+
+.materials__slider-title {
+  width: 100%;
+  margin-top: 2em;
+  padding: 1.5em;
+  font-size: 1.15em;
+  line-height: 1.4em;
+  color: #ffffff;
+  background-color: rgba(0,0,0,0.5);
+  box-sizing: border-box;
+}
+
+.materials__slider .slick-prev::before,
+.materials__slider .slick-next::before {
+  display: none;
+}
+
+.materials__slider .slick-dots {
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  width: auto;
+  padding: 5px;
+  background-color: #000;
+}
+
+.materials__slider .slick-dots li {
+  width: 10px;
+  height: 10px;
+}
+
+.materials__slider .slick-dots li button::before {
+  width: 10px;
+  height: 10px;
+  content: '';
+  background-color: #c7c6c7;
+}
+
+.materials__slider .slick-dots li.slick-active button::before {
+  background-color: #e93a1d;
+}
+
+.materials__cards {
+  margin: 1em 0;
+  padding: 0.5em;
+  box-sizing: border-box;
+}
+
+.materials__card {
+  margin: 0.5em 0;
+  padding: 0.5em 0;
+}
+
+.materials__card a {
+  position: relative;
+  display: block;
+  width: 260px;
+  height: 260px;
+  margin: 0 auto;
+  overflow-y: hidden;
+}
+
+.materials__card a::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1.5em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: rgba(0,0,0,0.5);
+  content: 'Подробнее';
+  box-sizing: border-box;
+  animation-name: hide-popup;
+  animation-duration: 0.5s;
+  opacity: 0;
+}
+
+.materials__card a:hover::after,
+.materials__card a:active::after {
+  animation-name: show-popup;
+  animation-duration: 0.5s;
+  opacity: 1;
+}
+
+.materials__card p {
+  display: block;
+  width: 260px;
+  margin: 1em auto;
+  font-size: 1.1em;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+.footer__box .logo-box {
+  display: none;
+}
+
+.footer__box-contacts {
+  margin: 1.5em auto;
+  padding: 0 0.5em;
+  font-size: 1.1em;
+}
+
+.footer__box-contacts p {
+  line-height: 1.5em;
+}
+
+.footer__box-copy {
+  padding: 1.5em 0;
+  color: #ffffff;
+  background: url('img/eksdrev_bg-1-s.jpg') no-repeat 50% 0;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+footer .social {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.social-icons {
+  margin: 0.5em;
+}
+
+.social-icons a {
+  position: relative;
+  display: block;
+  width: 32px;
+  height: 32px;
+  font-size: 0;
+  color: #000000;
+  border-radius: 50%;
+  border: 1px solid #000000;
+  box-shadow: 1px 1px 0 0 #c7c6c7;
+}
+
+.social-icons.social_vk a {
+  background: url('img/eksdrev_icon-vk.png') no-repeat 50% 50%;
+  background-size: 60%;
+}
+
+.social-icons.social_ok a {
+  background: url('img/eksdrev_icon-ok.png') no-repeat 50% 50%;
+  background-size: 60%;
+}
+
+.social-icons.social_inst a {
+  background: url('img/eksdrev_icon-in.png') no-repeat 50% 50%;
+  background-size: 60%;
+}
+
+.social-icons a:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #e93a1d;
+  content: '';
+  animation-name: hide-popup;
+  animation-duration: 0.5s;
+  opacity: 0;
+}
+
+.social-icons a:hover {
+  color: #ffffff;
+  box-shadow: none;
+  border: 1px solid #e93a1d;
+}
+
+.social-icons a:hover::after {
+  animation-name: show-popup;
+  animation-duration: 0.5s;
+  opacity: 1;
+}
+
+
+
+
+/*============== for tablets 768px ===========================*/
+@media screen and (min-width: 768px) {
+
+  /*--------------------------------------------------------------
+  # Typography
+  --------------------------------------------------------------*/
+
+  /*--------------------------------------------------------------
+  # Header
+  --------------------------------------------------------------*/
+
+  /*--------------------------------------------------------------
+  # Content
+  --------------------------------------------------------------*/
+
+  /*--------------------------------------------------------------
+  # Footer
+  --------------------------------------------------------------*/
+
+}
+
+/*============== for tablets 1024px ===========================*/
+@media screen and (min-width: 1024px) {
+
+  /*--------------------------------------------------------------
+  # Typography
+  --------------------------------------------------------------*/
+
+  .container {
+    max-width: 960px;
+  }
+
+
+  /*--------------------------------------------------------------
+  # Header
+  --------------------------------------------------------------*/
+
+  /*--------------------------------------------------------------
+  # Content
+  --------------------------------------------------------------*/
+
+  /*--------------------------------------------------------------
+  # Footer
+  --------------------------------------------------------------*/
+
+}
+
+/*=================== for PC 1280px ===========================*/
+@media screen and (min-width: 1280px) {
+
+  /*--------------------------------------------------------------
+  # Typography
+  --------------------------------------------------------------*/
+
+  /*--------------------------------------------------------------
+  # Header
+  --------------------------------------------------------------*/
+
+  /*--------------------------------------------------------------
+  # Content
+  --------------------------------------------------------------*/
+
+  /*--------------------------------------------------------------
+  # Footer
+  --------------------------------------------------------------*/
+
+}
+
+/*=================== for PC 1366px ===========================*/
+@media screen and (min-width: 1366px) {
+
+  /*--------------------------------------------------------------
+  # Typography
+  --------------------------------------------------------------*/
+
+  /*--------------------------------------------------------------
+  # Header
+  --------------------------------------------------------------*/
+
+  /*--------------------------------------------------------------
+  # Content
+  --------------------------------------------------------------*/
+
+  /*--------------------------------------------------------------
+  # Footer
+  --------------------------------------------------------------*/
+
+}
+
+/*=================== for MAC 1600px ===========================*/
+@media screen and (min-width: 1600px) {
+
+  /*--------------------------------------------------------------
+  # Typography
+  --------------------------------------------------------------*/
+
+  /*--------------------------------------------------------------
+  # Header
+  --------------------------------------------------------------*/
+
+  /*--------------------------------------------------------------
+  # Content
+  --------------------------------------------------------------*/
+
+  /*--------------------------------------------------------------
+  # Footer
+  --------------------------------------------------------------*/
+
+}

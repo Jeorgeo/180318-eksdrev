@@ -138,8 +138,8 @@ img {
   flex-direction: column;
   width: 100%;
   color: #ffffff;
-  background-color: rgba(0, 0, 0, 0.6);
-  box-shadow: 0 5px 5px 2px rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 5px 5px 2px rgba(0, 0, 0, 0.8);
 }
 
 .logo-box {
@@ -148,7 +148,7 @@ img {
 
 .logo-box a {
   display: block;
-  max-width: 200px;
+  max-width: 230px;
   margin: 0 auto 1em auto;
 }
 
@@ -169,6 +169,7 @@ img {
   position: relative;
   display: block;
   padding-left: 30px;
+  padding-right: 40px;
   font-size: 1.1em;
   margin-bottom: 1em;
 }
@@ -182,6 +183,18 @@ img {
   height: 18px;
   content: '';
   filter: grayscale(1);
+}
+
+.contact-box::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: url('../img/eksdrev_icon-phone.png') no-repeat 0 0;
+  background-size: contain;
+  content: '';
 }
 
 .contact-box.velcom::after {
@@ -206,7 +219,7 @@ img {
 .header__menu-toggle {
   position: absolute;
   top: 1em;
-  left: 1em;
+  right: 1em;
   display: block;
   width: 32px;
   height: 32px;
@@ -285,6 +298,14 @@ img {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+main {
+
+}
+
+.main {
+  background: #000000 url('');
+  padding-top: 150px;
+}
 
 /*--------------------------------------------------------------
 # Footer

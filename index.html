@@ -8,51 +8,56 @@
     <meta name="viewport" content="width=device-width initial-scale=1.0">
     <link href="img/***.ico" rel="shortcut icon" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="lightbox/css/lightbox.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
-      <div id="js-toggle" class="header__menu-toggle">
-        <button class="header__toggle-btn"><span>menu</span></button>
-      </div>
-      <div class="logo-box">
-        <a href="#">
-          <img src="img/eksdrev_logo.png" alt="ЛидаЭксДрев Производство корпусной мебели в Лиде">
-        </a>
-      </div>
-      <div class="header__toggle-menu">
-        <nav class="menu-box">
-          <ul>
-            <li><a href="">корпусная мебель</a></li>
-            <li><a href="">мебель из массива</a></li>
-            <li><a href="">отделка интерьера</a></li>
-            <li><a href="">материалы</a></li>
-            <li><a href="">контакты</a></li>
-          </ul>
-        </nav>
-        <div class="contacts-box">
-          <a href="#" class="contact-box velcom">
-            +375 (29) 144-43-73
+      <div class="container">
+        <div id="js-toggle" class="header__menu-toggle">
+          <button class="header__toggle-btn"><span>menu</span></button>
+        </div>
+        <div class="logo-box">
+          <a href="#">
+            <img src="img/eksdrev_logo.png" alt="ЛидаЭксДрев Производство корпусной мебели в Лиде">
           </a>
-          <a href="#" class="contact-box mts">
-            +375 (29) 783-37-96
-          </a>
-        </div>        
+        </div>
+        <div class="header__mobile-menu">
+          <nav class="menu-box">
+            <ul>
+              <li><a href="">корпусная мебель</a></li>
+              <li><a href="">мебель из массива</a></li>
+              <li><a href="">отделка интерьера</a></li>
+              <li><a href="">материалы</a></li>
+              <li><a href="">контакты</a></li>
+            </ul>
+          </nav>
+          <div class="contacts-box">
+            <a href="#" class="contact-box velcom">
+              +375 (29) 144-43-73
+            </a>
+            <a href="#" class="contact-box mts">
+              +375 (29) 783-37-96
+            </a>
+          </div>
+        </div>
       </div>
-
-
     </header>
     <main>
       <section class="main block-1">
-        <div class="title-box">
-          <h1>
-            Производство корпусной мебели в Лиде
-          </h1>
-          <p>
-            Профессионализм в каждой детали - изысканность в каждом интерьре.
-          </p>
-          <a class="order-btn" href="#">Оставить заявку</a>
+        <div class="container">
+          <div class="title-box">
+            <h1>
+              Производство корпусной мебели <span>в Лиде</span>
+            </h1>
+            <p>
+              Профессионализм в каждой детали - изысканность в каждом интерьре.
+            </p>
+            <a class="order-btn" href="#">Оставить заявку</a>
+          </div>
         </div>
       </section>
       <section class="production">
@@ -64,12 +69,12 @@
           </div>
           <div class="production__product">
             <a href="#">
+              <img src="img/гостинная_001.jpg" alt="">
               <figure>
                 <h4>Кухни</h4>
                 <p>
                   от 300 рублей
                 </p>
-                <img src="img/гостинная_001.jpg" alt="">
                 <button class="production__product-btn"type="button" name="button">
                   Заказать
                 </button>
@@ -85,12 +90,12 @@
           </div>
           <div class="production__product">
             <a href="#">
+              <img src="img/гостинная_001.jpg" alt="">
               <figure>
                 <h4>Шкафы-купе</h4>
                 <p>
                   от 300 рублей
                 </p>
-                <img src="img/гостинная_001.jpg" alt="">
                 <button class="production__product-btn"type="button" name="button">
                   Заказать
                 </button>
@@ -106,12 +111,12 @@
           </div>
           <div class="production__product">
             <a href="#">
+              <img src="img/гостинная_001.jpg" alt="">
               <figure>
                 <h4>Прихожие</h4>
                 <p>
                   от 300 рублей
                 </p>
-                <img src="img/гостинная_001.jpg" alt="">
                 <button class="production__product-btn"type="button" name="button">
                   Заказать
                 </button>
@@ -119,7 +124,7 @@
             </a>
           </div>
         </div>
-        <div class="production__row-inverse">
+        <div class="production__cell inverse">
           <div class="production__advantage">
             <p>
               Обеспечиваем короткие сроки изготовления
@@ -127,12 +132,12 @@
           </div>
           <div class="production__product">
             <a href="#">
+              <img src="img/гостинная_001.jpg" alt="">
               <figure>
                 <h4>Детские</h4>
                 <p>
                   от 300 рублей
                 </p>
-                <img src="img/гостинная_001.jpg" alt="">
                 <button class="production__product-btn"type="button" name="button">
                   Заказать
                 </button>
@@ -140,7 +145,7 @@
             </a>
           </div>
         </div>
-        <div class="production__row-inverse">
+        <div class="production__cell inverse">
           <div class="production__advantage">
             <p>
               имея собственное производство предлагаем самые низкие цены
@@ -148,12 +153,12 @@
           </div>
           <div class="production__product">
             <a href="#">
+              <img src="img/гостинная_001.jpg" alt="">
               <figure>
                 <h4>Офисная мебель</h4>
                 <p>
                   от 300 рублей
                 </p>
-                <img src="img/гостинная_001.jpg" alt="">
                 <button class="production__product-btn"type="button" name="button">
                   Заказать
                 </button>
@@ -161,7 +166,7 @@
             </a>
           </div>
         </div>
-        <div class="production__row-inverse">
+        <div class="production__cell inverse">
           <div class="production__advantage">
             <p>
               имея собственное производство предлагаем самые низкие цены
@@ -169,12 +174,12 @@
           </div>
           <div class="production__product">
             <a href="#">
+              <img src="img/гостинная_001.jpg" alt="">
               <figure>
                 <h4>Офисная мебель</h4>
                 <p>
                   от 300 рублей
                 </p>
-                <img src="img/гостинная_001.jpg" alt="">
                 <button class="production__product-btn"type="button" name="button">
                   Заказать
                 </button>
@@ -187,38 +192,44 @@
         <h3>Сделать заказ очень просто</h3>
         <ul>
           <li>
-            <img src="img/гостинная_001.jpg" alt="">
+            <figure>
+              <img src="img/гостинная_001.jpg" alt="">
+            </figure>
             <p class="order__list-title">
-              <i>1</i>
+              <span class="order__list-title_number">1</span>
               <span >Сделать выбор</span>
             </p>
-            <p>
+            <p class="order__list-desc">
               Оставьте заявку любым удобным для Вас способом и расскажите о том, какую мебель Вы хотели бы заказать.
             </p>
           </li>
           <li>
-            <img src="img/гостинная_001.jpg" alt="">
+            <figure>
+              <img src="img/гостинная_001.jpg" alt="">
+            </figure>
             <p class="order__list-title">
-              <i>2</i>
+              <span class="order__list-title_number">2</span>
               <span >Заключить договор</span>
             </p>
-            <p>
+            <p class="order__list-desc">
               Наши специалисты проконсультируют Вас по всем вопросам. Приезжаете к нам в офис, мы обсуждаем все нюансы и заключаем с Вами договор
             </p>
           </li>
           <li>
-            <img src="img/гостинная_001.jpg" alt="">
+            <figure>
+              <img src="img/гостинная_001.jpg" alt="">
+            </figure>
             <p class="order__list-title">
-              <i>3</i>
+              <span class="order__list-title_number">3</span>
               <span >Наслаждаться!</span>
             </p>
-            <p>
+            <p class="order__list-desc">
               Наши специалисты изготавливают мебель с учетом всех Ваших пожеланий. Мы привозим и устанавливаем мебель, а Вам остается только наслаждаться ей!
             </p>
           </li>
         </ul>
         <div class="order__form">
-          <form class="" method="post">
+          <form method="post">
             <input id="name" type="text" name="name" placeholder="Ваше имя">
             <input type="text" name="phone" placeholder="Ваш номер телефона">
             <button type="button" name="button">Заказать звонок</button>
@@ -226,6 +237,7 @@
         </div>
       </section>
       <section class="clients">
+        <h3>Наши клиенты</h3>
         <div class="clients__slider">
           <figure class="clients__client">
             <img src="img/eksdrev_client-01.jpg" alt="">
@@ -239,26 +251,47 @@
             <img src="img/eksdrev_client-01.jpg" alt="">
             <p>Вороновский отдел образования: ДУ г.п.Вороново</p>
           </figure>
+          <figure class="clients__client">
+            <img src="img/eksdrev_client-01.jpg" alt="">
+            <p>Вороновский отдел образования: ДУ г.п.Вороново</p>
+          </figure>
+          <figure class="clients__client">
+            <img src="img/eksdrev_client-01.jpg" alt="">
+            <p>Вороновский отдел образования: ДУ г.п.Вороново</p>
+          </figure>
+          <figure class="clients__client">
+            <img src="img/eksdrev_client-01.jpg" alt="">
+            <p>Вороновский отдел образования: ДУ г.п.Вороново</p>
+          </figure>
+          <figure class="clients__client">
+            <img src="img/eksdrev_client-01.jpg" alt="">
+            <p>Вороновский отдел образования: ДУ г.п.Вороново</p>
+          </figure>
+          <figure class="clients__client">
+            <img src="img/eksdrev_client-01.jpg" alt="">
+            <p>Вороновский отдел образования: ДУ г.п.Вороново</p>
+          </figure>
         </div>
-
       </section>
       <section class="partners">
         <p class="section-title">
-          Для наших клиентов у нас всегда есть скидки и специальные предложения:
+          Для наших клиентов всегда актуальные скидки и специальные предложения от партнеров:
         </p>
         <div class="partners__box">
-          <div class="partners__left-side">
+          <figure class="partners__left-side">
+            <img src="img/гостинная_001.jpg" alt="">
             <div class="shadow-box">
-              <i>2%</i>
+              <span>2%</span>
               <p>скидка на всю мебель покупателям магазина "ЛидаТермотехника"</p>
             </div>
-          </div>
-          <div class="partners__right-side">
+          </figure>
+          <figure class="partners__right-side">
+            <img src="img/гостинная_001.jpg" alt="">
             <div class="shadow-box">
-              <i>2%</i>
+              <span>2%</span>
               <p>скидка на всю встраиваемую технику EXITEQ</p>
             </div>
-          </div>
+          </figure>
         </div>
         <div class="order__form">
           <form class="" method="post">
@@ -271,31 +304,54 @@
       <section class="materials">
         <div class="materials__slider">
           <div class="materials__slider-box">
-
+            <figure>
+              <img src="pics/eksdrev_transform1.jpg" alt="">
+            </figure>
+            <figure>
+              <img src="pics/eksdrev_transform2.jpg" alt="">
+            </figure>
+            <figure>
+              <img src="pics/eksdrev_transform3.jpg" alt="">
+            </figure>
+            <figure>
+              <img src="pics/eksdrev_transform4.jpg" alt="">
+            </figure>
+            <figure>
+              <img src="pics/eksdrev_transform5.jpg" alt="">
+            </figure>
+            <figure>
+              <img src="pics/eksdrev_transform6.jpg" alt="">
+            </figure>
           </div>
           <div class="materials__slider-title">
             <p>
-              Дизайнеры компании "ЛидаЭксДрев" не ограничиваются типовыми решениями.
-              Мы предлагаем самые разнообразные материалы.
-              А также предлагаем уникальное решение для компактных помещений - мебель-трансформер.
+              Дизайнеры компании "ЛидаЭксДрев" не ограничиваются типовыми решениями.<br>
+              Мы предлагаем уникальное решение для компактных помещений - мебель-трансформер.<br>
+              Всегда в наличии самые разнообразные материалы от и фурнитруа.
             </p>
           </div>
         </div>
         <div class="materials__cards">
           <figure class="materials__card">
-            <img src="img/eksdrev_lakobel-color.jpg" alt="">
+            <a href="img/eksdrev_lakobel-color.jpg" data-lightbox="roadtrip">
+              <img src="img/eksdrev_lakobel-color.jpg" alt="">
+            </a>
             <p>
               Лакобель - цветовая гамма
             </p>
           </figure>
           <figure class="materials__card">
-            <img src="img/eksdrev_lakobel-color.jpg" alt="">
+            <a href="img/eksdrev_lakobel-color.jpg" data-lightbox="roadtrip">
+              <img src="img/eksdrev_lakobel-color.jpg" alt="">
+            </a>
             <p>
               Лакобель - цветовая гамма
             </p>
           </figure>
           <figure class="materials__card">
-            <img src="img/eksdrev_lakobel-color.jpg" alt="">
+            <a href="img/eksdrev_lakobel-color.jpg" data-lightbox="roadtrip" data-title="My caption">
+              <img src="img/eksdrev_lakobel-color.jpg" alt="">
+            </a>
             <p>
               Лакобель - цветовая гамма
             </p>
@@ -312,48 +368,52 @@
     </main>
     <footer>
       <div class="footer__map">
-
+        <img src="img/eksdrev_map.jpg" alt="ЛидаЭксДрев Производство корпусной мебели в Лиде">
       </div>
       <div class="footer__box">
-        <div class="logo-box">
-          <a href="#">
-            <img src="img/eksdrev_logo.png" alt="ЛидаЭксДрев Производство корпусной мебели в Лиде">
-          </a>
-        </div>
-        <div class="footer__box-contacts">
-          <p>
-            Наш адрес: г.Лида ул.Камышевая, 6<br>
-            Режим работы:<br>
-    				пн-пт: 10:00 - 17:30<br>
-    				сб-вс: 10:00 - 16:00
-            <a href="#" class="contact-box velcom">
-              +375 (29) 144-43-73
+        <div class="container">
+          <div class="logo-box">
+            <a href="#">
+              <img src="img/eksdrev_logo.png" alt="ЛидаЭксДрев Производство корпусной мебели в Лиде">
             </a>
-            <a href="#" class="contact-box mts">
-              +375 (29) 783-37-96
-            </a>
-            <a href="#" class="contact-box email">
-              lidexdrev@mail.ru
-            </a>
-          </p>
-          <div class="social">
-    				<div class="social-icons social_vk"><a href="#"></a></div>
-    				<div class="social-icons social_ok"><a href="#"></a></div>
-    				<div class="social-icons social_inst"><a href="#"></a></div>
-    			</div>
+          </div>
+          <div class="footer__box-contacts">
+            <p>
+              Наш адрес: г.Лида ул.Камышевая, 6<br>
+              Режим работы:<br>
+      				пн-пт: 10:00 - 17:30<br>
+      				сб-вс: 10:00 - 16:00
+            </p>
+              <a href="#" class="contact-box velcom">
+                +375 (29) 144-43-73
+              </a>
+              <a href="#" class="contact-box mts">
+                +375 (29) 783-37-96
+              </a>
+              <a href="#" class="contact-box email">
+                lidexdrev@mail.ru
+              </a>
+            <div class="social">
+      				<div class="social-icons social_vk"><a href="#">вконтакте</a></div>
+      				<div class="social-icons social_ok"><a href="#">одноклассники</a></div>
+      				<div class="social-icons social_inst"><a href="#">инстаграмм</a></div>
+      			</div>
+          </div>
         </div>
         <div class="footer__box-copy">
-          <p>
-            &copy;ООО "ЛидаЭксДрев" УНП 590590895<br>
-            Все права защищены. Предложение не является публичной офертой.
-            Разработано PRO-web.by
-          </p>
+          <div class="container">
+            <p>
+              &copy;ООО "ЛидаЭксДрев" УНП 590590895<br>
+              Все права защищены. Предложение не является публичной офертой.
+            </p>
+          </div>
         </div>
       </div>
     </footer>
-    <script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
-    <script type="text/javascript" src="js/jquery-migrate-1.4.1.min.js"></script>
-    <script type="text/javascript" src="slick/slick_min.js"></script>
-    <script type="text/javascript" src="js/slider.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="lightbox/js/lightbox.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>
