@@ -397,7 +397,7 @@ button:hover {
 }
 
 .header__toggle-btn {
-  background: tranparent;
+  background-color: tranparent;
   border: none;
   outline: none;
   box-shadow: none;
@@ -1017,8 +1017,7 @@ footer .social {
     display: inline;
   }
 
-  .main .title-box p,
-  .main .title-box h1 {
+  .main .title-box p {
     display: block;
     width: 200px;
     margin: 50px 0 60px auto;
@@ -1336,8 +1335,7 @@ footer .social {
     font-size: 2.2em;
   }
 
-  .main .title-box p,
-  .main .title-box h1 {
+  .main .title-box p {
     width: auto;
     max-width: 340px;
   }
@@ -1414,13 +1412,33 @@ footer .social {
 /*=================== for MAC 1366px ===========================*/
 @media screen and (min-width: 1366px) {
 
-  .materials__slider .materials__slider-box {
-    margin-left: 5%;
+  .materials {
+    position: relative;
   }
 
-  .materials__slider-title {
-    font-size: 1.25em;
-    line-height: 1.5em;
+  .materials__slider .materials__slider-box {
+    width: 30%;
+  }
+
+  .materials__slider .materials__slider-title {
+    width: 70%;
+    padding-left: 1em;
+  }
+
+  .materials__slider .materials__slider-title p {
+    margin: 0;
+  }
+
+  .materials__cards {
+    position: absolute;
+    right: 0;
+    bottom: 110px;
+    width: 70%;
+    background-color: #ffffff;
+  }
+
+  .materials .order__form {
+    position: relative;
   }
 }
 
@@ -1482,7 +1500,7 @@ footer .social {
   }
 
   .production__product figure p {
-    margin: 25% 0 0 0;
+    margin: 0.5em 0 0 0;
   }
 
   /*--------------------------------------------------------------
