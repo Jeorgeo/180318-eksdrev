@@ -511,12 +511,12 @@ template {
 
 @keyframes show-panel {
   0% { bottom: 160px; }
-  80% { bottom: -230px; }
-  100% { bottom: -210px; }
+  80% { bottom: -250px; }
+  100% { bottom: -240px; }
 }
 
 @keyframes hidden-panel {
-  from { bottom: -210px; }
+  from { bottom: -240px; }
   to   { bottom: 160px; }
 }
 
@@ -760,6 +760,10 @@ button:hover {
   filter: grayscale(0);
 }
 
+.contact-box p {
+  margin: 0;
+}
+
 /*--------------------------------------------------------------
 # Header
   ## Header mobile menu
@@ -875,7 +879,7 @@ button:hover {
   animation-name: show-panel;
   animation-duration: 0.8s;
   animation-timing-function: ease-out;
-  bottom: -210px;
+  bottom: -240px;
 }
 
 /*--------------------------------------------------------------
@@ -931,7 +935,7 @@ main {
   z-index: 555;
   display: block;
   width: 100%;
-  margin: 2em auto;
+  margin: 1.4em auto;
   padding: 20px;
   text-align: center;
   text-transform: uppercase;
@@ -1138,6 +1142,10 @@ main {
   padding-bottom: 1em;
 }
 
+.clients .container {
+  max-width: 300px;
+}
+
 .clients__client {
   animation: decoloring;
   animation-duration: 0.5s;
@@ -1157,7 +1165,7 @@ main {
 
 .partners .section-title {
   margin: 0;
-  padding: 2em calc(2em + 20px);
+  padding: 2em calc(2em + 20px) 0 calc(2em + 20px);
   text-align: center;
   text-transform: uppercase;
   font-size: 1.2em;
@@ -1182,12 +1190,17 @@ main {
   height: calc(100% - 80px);
   padding: 1em;
   font-size: 1.2em;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.5);
   box-sizing: border-box;
 }
 
+.partners__box .partners__left-side .shadow-box {
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .partners__box .shadow-box p {
-  padding-top: 3em;
+  padding-top: 2em;
 }
 
 .partners__box .shadow-box span {
@@ -1195,7 +1208,7 @@ main {
   top: 0;
   left: 20px;
   margin-right: 1em;
-  font-size: 5em;
+  font-size: 4em;
   color: #e93a1d;
   font-family: 'Exo2-Bold', 'Arial', serif;
   text-shadow: 1px 1px 6px #010104;
@@ -1318,7 +1331,7 @@ main {
 }
 
 .clients .slick-prev::before,
-.slick-next::before {
+.clients .slick-next::before {
   color: #000000;
 }
 
@@ -1337,7 +1350,12 @@ main {
 }
 
 .footer__box-contacts p {
+  margin: 0;
   line-height: 1.5em;
+}
+
+footer .contact-box::after {
+  top: 8px;
 }
 
 .footer__copy {
@@ -1421,7 +1439,8 @@ footer .social {
   # Typography
   --------------------------------------------------------------*/
 
-  .container {
+  .container,
+  .clients .container {
     max-width: 720px;
   }
 
@@ -1446,7 +1465,7 @@ footer .social {
 
   .contacts-box {
     margin-left: 3em;
-    margin-right: 2em;
+    margin-right: 5em;
   }
 
   header .contact-box.mts {
@@ -1521,6 +1540,10 @@ footer .social {
 
   .production__product figure h4 {
     right: 2em;
+  }
+
+  .production__product figure p {
+    margin: 35% 0 0 0;
   }
 
   .order ul {
@@ -1680,6 +1703,10 @@ footer .social {
     margin: 1em 0 1.5em auto;
   }
 
+  .production__product figure p {
+    margin: 40% 0 0 0;
+  }
+
   .order ul > li {
     width: 33%;
   }
@@ -1761,7 +1788,21 @@ footer .social {
   # Content
   --------------------------------------------------------------*/
 
-  .production__product figure {
+  .main.block-1 {
+    padding-bottom: 3em;
+  }
+
+  .main .title-box h1 {
+    width: 100%;
+    font-size: 1.8em;
+  }
+
+  .main .title-box h1 span {
+    display: block;
+  }
+
+  .production__product figure,
+  .production__advantage {
     padding: 3.5em;
   }
 
@@ -1777,12 +1818,69 @@ footer .social {
     background-attachment: fixed;
   }
 
+  .order {
+    padding: 2.5em 0;
+  }
+
+  .order ul {
+    padding-bottom: 1.5em;
+  }
+
+  .order .order__form,
+  .materials .order__form {
+    padding: 2em 0;
+  }
+
+  .partners {
+    padding-bottom: 1em;
+    background-color: #000000;
+  }
+
+  .partners .section-title {
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 2.5em;
+  }
+
+  .partners__box .shadow-box {
+    font-size: 1.7em;
+  }
+
+  .partners__box .shadow-box span {
+    font-size: 5em;
+  }
+
+  .partners__box .shadow-box p {
+    padding-top: 3em;
+  }
+
+  .materials__slider-box.slick-initialized.slick-slider.slick-dotted {
+    margin: 0;
+  }
+
+  .materials__slider .materials__slider-title {
+    padding: 1.5em 1em 1em 3em;
+  }
+
+  .materials__slider .materials__slider-title {
+    margin: 0;
+  }
+
   /*--------------------------------------------------------------
   # Footer
   --------------------------------------------------------------*/
 
   .footer__box .container {
     padding: 0 3em;
+  }
+
+  .footer__box .logo-box {
+    margin-top: 2.5em;
+  }
+
+  .footer__box-contacts .widget__footer-contacts {
+    margin: 0.5em 0;
+    font-size: 1.2em;
   }
 
 }
@@ -1794,6 +1892,10 @@ footer .social {
   # Typography
   --------------------------------------------------------------*/
 
+  .clients .container {
+    max-width: 1150px;
+  }
+
   /*--------------------------------------------------------------
   # Header
   --------------------------------------------------------------*/
@@ -1801,6 +1903,10 @@ footer .social {
   /*--------------------------------------------------------------
   # Content
   --------------------------------------------------------------*/
+
+  .main.block-1 {
+    padding-bottom: 1px;
+  }
 
   .main .title-box {
     margin-left: 55%;
@@ -1840,7 +1946,8 @@ footer .social {
     flex-direction: row-reverse;
   }
 
-  .production__product figure {
+  .production__product figure,
+  .production__advantage {
     padding: 1.5em;
   }
 
@@ -1857,7 +1964,7 @@ footer .social {
   }
 
   .partners__box .shadow-box {
-    font-size: 2.2em;
+    font-size: 2em;
   }
 
   .partners__box .shadow-box p {
@@ -1889,6 +1996,21 @@ footer .social {
 /*=================== for MAC 1366px ===========================*/
 @media screen and (min-width: 1366px) {
 
+  header .contacts-box {
+    flex-direction: row;
+  }
+
+  header .contact-box.velcom,
+  header .contact-box.mts {
+    margin-bottom: 0;
+    font-size: 1.5em;
+  }
+
+  .contact-box::after {
+    width: 24px;
+    height: 24px;
+  }
+
   .materials__slider .materials__slider-box {
     margin-left: 5%;
   }
@@ -1897,6 +2019,8 @@ footer .social {
     font-size: 1.25em;
     line-height: 1.5em;
   }
+
+
 }
 
 /*=================== for MAC 1600px ===========================*/

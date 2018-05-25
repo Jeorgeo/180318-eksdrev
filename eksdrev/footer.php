@@ -11,24 +11,35 @@
 
 ?>
 
-	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'eksdrev' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'eksdrev' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'eksdrev' ), 'eksdrev', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+<footer id="contacts">
+	<div class="footer__box">
+		<div class="footer__box-map">
+			<img src="<?php bloginfo('template_url'); ?>/img/eksdrev_map.jpg" alt="ЛидаЭксДрев Производство корпусной мебели в Лиде">
+		</div>
+		<div class="container">
+			<div class="logo-box">
+				<?php the_custom_logo(); ?>
+			</div>
+			<div class="footer__box-contacts">
+				<?php dynamic_sidebar( 'contacts-adress' ); ?>
+				<?php dynamic_sidebar( 'contacts-vel' ); ?>
+				<?php dynamic_sidebar( 'contacts-mts' ); ?>
+				<?php dynamic_sidebar( 'contacts-mail' ); ?>
+				<div class="social">
+					<?php dynamic_sidebar( 'social-vk' ); ?>
+					<?php dynamic_sidebar( 'social-ok' ); ?>
+					<?php dynamic_sidebar( 'social-inst' ); ?>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer__copy">
+		<div class="container">
+			<?php dynamic_sidebar( 'f-bottom-1' ); ?>
+		</div>
+	</div>
+</footer>
 
 <?php wp_footer(); ?>
 

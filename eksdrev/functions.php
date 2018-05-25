@@ -113,6 +113,78 @@ function eksdrev_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Контакты - Velcom', 'eksdrev' ),
+		'id'            => 'contacts-vel',
+		'description'   => esc_html__( 'Добавьте ссылку сюда.', 'eksdrev' ),
+		'before_widget' => '<span class="contact-box velcom">',
+		'after_widget'  => '</span>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Контакты - Mтс', 'eksdrev' ),
+		'id'            => 'contacts-mts',
+		'description'   => esc_html__( 'Добавьте ссылку сюда.', 'eksdrev' ),
+		'before_widget' => '<span class="contact-box mts">',
+		'after_widget'  => '</span>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Контакты - почта', 'eksdrev' ),
+		'id'            => 'contacts-mail',
+		'description'   => esc_html__( 'Добавьте ссылку сюда.', 'eksdrev' ),
+		'before_widget' => '<span class="contact-box email">',
+		'after_widget'  => '</span>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Контакты - адрес', 'eksdrev' ),
+		'id'            => 'contacts-adress',
+		'description'   => esc_html__( 'Добавьте текст сюда.', 'eksdrev' ),
+		'before_widget' => '<div class="widget__footer-contacts">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Соц.сети - ВК', 'eksdrev' ),
+		'id'            => 'social-vk',
+		'description'   => esc_html__( 'Добавьте ссылку сюда.', 'eksdrev' ),
+		'before_widget' => '<div class="social-icons social_vk">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Соц.сети - ОК', 'eksdrev' ),
+		'id'            => 'social-ok',
+		'description'   => esc_html__( 'Добавьте ссылку сюда.', 'eksdrev' ),
+		'before_widget' => '<div class="social-icons social_ok">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Соц.сети - Инстаграмм', 'eksdrev' ),
+		'id'            => 'social-inst',
+		'description'   => esc_html__( 'Добавьте ссылку сюда.', 'eksdrev' ),
+		'before_widget' => '<div class="social-icons social_inst">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Контент внизу подвала', 'eksdrev' ),
+		'id'            => 'f-bottom-1',
+		'description'   => esc_html__( 'Добавьте ссылку сюда.', 'eksdrev' ),
+		'before_widget' => '<div class="footer__copy-c1">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
 }
 add_action( 'widgets_init', 'eksdrev_widgets_init' );
 
@@ -120,17 +192,48 @@ add_action( 'widgets_init', 'eksdrev_widgets_init' );
  * Enqueue scripts and styles.
  */
 function eksdrev_scripts() {
+	$eksdrev_url = get_template_directory_uri();
+
 	wp_enqueue_style( 'eksdrev-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'eksdrev-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_style( 'normalize-style', $eksdrev_url . "/lightbox/css/lightbox.min.css", array(), '2', 'all' );
 
-	wp_enqueue_script( 'eksdrev-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_style( 'slick-style' ,  $eksdrev_url . "/slick/slick.css", array(), '2', 'all' );
+
+	wp_enqueue_style( 'slick-theme' ,  $eksdrev_url . "/slick/slick-theme.css", array(), '2', 'all' );
+
+	wp_enqueue_script( 'eksdrev-jquery', $eksdrev_url . '/js/jquery-3.3.1.min.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'eksdrev-jquery-migrate', $eksdrev_url . '/js/jquery-migrate-3.0.1.min.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'eksdrev-slick', $eksdrev_url . '/slick/slick.min.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'eksdrev-skip-link-focus-fix', $eksdrev_url . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'eksdrev-lightbox', $eksdrev_url . '/lightbox/js/lightbox.min.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'eksdrev-mainscript', $eksdrev_url . '/js/main.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'eksdrev_scripts' );
+
+/**
+ * require TGM.
+ */
+require get_template_directory() . '/tgm/tgm-files.php';
+
+/**
+ * require clients.
+ */
+require get_template_directory() . '/inc/clients.php';
+
+/**
+ * require materials.
+ */
+require get_template_directory() . '/inc/materials.php';
 
 /**
  * Implement the Custom Header feature.
@@ -158,4 +261,3 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-

@@ -49,10 +49,17 @@ $('.materials__slider-box').slick({
 // mobile menu
 
 var menuNav = document.querySelector('.menu-box');
+var menuItem = menuNav.querySelectorAll('li.menu-item > a');
 var toggleBtn = document.querySelector('#js-toggle');
 var toggleArrow = toggleBtn.querySelector('.header__toggle-btn');
 
+
 toggleBtn.addEventListener('click', moveMenu);
+
+for (var i = 0; i < menuItem.length; i++) {
+  menuItem[i].addEventListener('click', moveMenu);
+}
+
 
 function moveMenu(){
   if(menuNav.classList.contains('nav-show')) {
@@ -68,10 +75,10 @@ function moveMenu(){
 
 //scroll
 
-$("a[href*=#search]").on("click", function(e){
+$("a[href*='#']").on("click", function(e){
         var anchor = $(this);
         $('html, body').stop().animate({
-            scrollTop: $(anchor.attr('href')).offset().top
+            scrollTop: $(anchor.attr('href')).offset().top - 150
         }, 777);
         e.preventDefault();
         return false;
