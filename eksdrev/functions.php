@@ -114,6 +114,15 @@ function eksdrev_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
+	 'name'          => esc_html__( 'admin_mail', 'eksdrev' ),
+	 'id'            => 'admin_mail',
+	 'description'   => esc_html__( 'Майл отправки корреспонденции', 'eksdrev' ),
+	 'before_widget' => '<div>',
+	 'after_widget'  => '</div>',
+	 'before_title'  => '<h2 class="widget-title">',
+	 'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
 		'name'          => esc_html__( 'Контакты - Velcom', 'eksdrev' ),
 		'id'            => 'contacts-vel',
 		'description'   => esc_html__( 'Добавьте ссылку сюда.', 'eksdrev' ),

@@ -31,6 +31,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   ## Header mobile menu
 # Content
 # Footer
+# Popup form
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -678,8 +679,8 @@ button:hover {
   flex-direction: column;
   width: 100%;
   color: #ffffff;
-  background-color: rgba(0, 0, 0, 0.8);
-  box-shadow: 0 5px 5px 2px rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.9);
 }
 
 .logo-box {
@@ -1431,6 +1432,178 @@ footer .social {
   opacity: 1;
 }
 
+/*--------------------------------------------------------------
+# Popup form
+--------------------------------------------------------------*/
+
+.wrap {
+  opacity: 0.8;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 16px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  overflow: auto;
+  opacity: 0;
+  display: none;
+}
+
+.popup-question,
+.popup-question-thanks {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 50px;
+  bottom: 0;
+  z-index: 99999;
+  margin: 5px auto;
+  padding: 1em;
+  width: 300px;
+  height: 300px;
+	border-radius: 5px;
+  color: #ffffff;
+  background-color: #000000;
+  opacity: 0;
+  display: none;
+}
+
+.popup-question {
+  height: 300px;
+}
+
+.popup-question .details-form::after {
+  display: none;
+}
+
+.popup-question-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+  z-index: 9999;
+	display: block;
+	margin: 0;
+	padding: 0;
+  width: 30px;
+	height: 30px;
+	font-size: 0;
+  animation-name: prerotate-up1;
+  animation-duration: 0.5s;
+}
+
+.popup-question-close::after,
+.popup-question-close::before {
+  position: absolute;
+  top: 13px;
+  left: 5px;
+  width: 20px;
+  height: 1px;
+  background-color: #ffffff;
+  transform: rotate(45deg);
+  content: '';
+}
+
+.popup-question-close::before {
+  transform: rotate(-45deg);
+}
+
+.popup-question-close:hover {
+  cursor: pointer;
+  animation-name: rotate-up1;
+  animation-duration: 0.3s;
+  transform: rotate(-180deg);
+}
+
+.cloud-form input,
+.cloud-form label,
+.cloud-form textarea {
+  display: block;
+  width: 90%;
+  margin: 0.8em auto;
+  padding: 0.8em;
+  font-size: 1.1em;
+  box-sizing: border-box;
+}
+
+label.cloud-form__phone,
+label.cloud-form__message {
+  margin: 0.8em auto;
+  padding: 0;
+}
+
+input.cloud-form__сonsent,
+label.cloud-form__сonsent {
+  display: inline-block;
+  width: 70px;
+  vertical-align: top;
+}
+
+label.cloud-form__сonsent {
+  width: 220px;
+  margin: 0.2em 0;
+  padding: 0;
+}
+
+.cloud-form__submit {
+  position: relative;
+  display: block;
+  width: 90%;
+  margin: 1.7em auto;
+  padding: 1.1em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+}
+
+.cloud-form__submit:hover {
+  cursor: pointer;
+  background-color: #e93a1d;
+}
+
+.popup-question-thanks-r {
+  position: fixed;
+  top:30px;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+  width: 80%;
+  max-width: 300px;
+  min-height: 300px;
+  margin: auto;
+  padding: 2em;
+  color: #000000;
+  background: rgba(255, 255, 255, 0.9) url("img/dn_spasibo.png") no-repeat 50% 100%;
+  background-size: contain;
+  border-radius: 10px;
+  display: none;
+}
+
+.modal-content-show {
+  display: block;
+  animation-name: show-popup;
+  animation-duration: 0.5s;
+  opacity: 1;
+}
+
+.modal-content-hide {
+  animation-name: hide-popup;
+  animation-duration: 0.4s;
+  opacity: 0;
+}
+
+.blur {
+  -webkit-filter: blur(5px);
+     -moz-filter: blur(5px);
+       -o-filter: blur(5px);
+      -ms-filter: blur(5px);
+          filter: blur(5px);
+}
+
 
 /*============== for tablets 768px ===========================*/
 @media screen and (min-width: 768px) {
@@ -1780,7 +1953,7 @@ footer .social {
   }
 
   .menu-box {
-    padding: 1em 1em 1em 4.5em;
+    padding: 5em 1em 1em 4.5em;
     box-sizing: border-box;
   }
 
@@ -1991,6 +2164,13 @@ footer .social {
   .footer__box .logo-box {
     margin-top: 3em;
   }
+
+  .footer__copy {
+    padding: 2.5em 0;
+    line-height: 2em;
+    box-shadow: inset 0 75px 75px 30px #000000;
+  }
+
 }
 
 /*=================== for MAC 1366px ===========================*/
@@ -2030,21 +2210,30 @@ footer .social {
   # Typography
   --------------------------------------------------------------*/
 
+  .container {
+    max-width: 1400px;
+  }
+
   /*--------------------------------------------------------------
   # Header
   --------------------------------------------------------------*/
+
+  .menu-box > div {
+    max-width: 1400px;
+    margin: auto;
+  }
 
   /*--------------------------------------------------------------
   # Content
   --------------------------------------------------------------*/
 
   .main .title-box {
-    margin-left: 57%;
+    margin-left: 53%;
     padding: 1em 0;
   }
 
   .production__cell {
-    width: 33%;
+    width: 33.33%;
   }
 
   .production__cell.inverse-md {
@@ -2076,12 +2265,17 @@ footer .social {
     margin: 25% 0 0 0;
   }
 
+  .materials__slider .materials__slider-title {
+    width: 100%;
+  }
+
   /*--------------------------------------------------------------
   # Footer
   --------------------------------------------------------------*/
 
   footer {
-    background: #000000
+    background: #000000;
+    box-shadow: 0 0 120px 120px #000000;
   }
 
   .footer__box {
@@ -2099,7 +2293,9 @@ footer .social {
   --------------------------------------------------------------*/
 
   body {
-    background-color: #000000;
+    background: url('img/eksdrev_bg-1.jpg') no-repeat 50% 0;
+    background-size: cover;
+    background-attachment: fixed;
   }
 
   /*--------------------------------------------------------------
@@ -2111,7 +2307,7 @@ footer .social {
   --------------------------------------------------------------*/
 
   main {
-    max-width: 1600px;
+    max-width: 1440px;
     margin: auto;
     background-color: #ffffff;
   }

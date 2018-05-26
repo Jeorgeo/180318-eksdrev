@@ -94,16 +94,19 @@ var winPopup = document.querySelector(".wrap");
 var formMark = document.querySelectorAll(".cloud-mark");
 var formTitle = document.querySelector(".cloud-title");
 var z = popupBtn.length;
+var siteBlur = document.querySelector(".site");
 
 function showPopup() {
   popup.classList.add("modal-content-show");
   winPopup.classList.add("modal-content-show");
+  siteBlur.classList.add("blur");
 };
 
 function removePopup() {
   popup.classList.add("modal-content-hide");
   winPopup.classList.add("modal-content-hide");
   popupS.classList.remove("modal-content-show");
+  siteBlur.classList.remove("blur");
   setTimeout(function() {
     popup.classList.remove("modal-content-show");
     winPopup.classList.remove("modal-content-show");
@@ -120,13 +123,14 @@ function showThank() {
   setTimeout(function() {
     popupS.classList.add("modal-content-hide");
     winPopup.classList.add("modal-content-hide");
-  }, 59000);
+  }, 1900);
   setTimeout(function() {
     popupS.classList.remove("modal-content-show");
     winPopup.classList.remove("modal-content-show");
     popupS.classList.remove("modal-content-hide");
     winPopup.classList.remove("modal-content-hide");
-  }, 60000);
+    siteBlur.classList.remove("blur");
+  }, 2000);
 };
 
 for (var i = 0; i < z; i++) {
@@ -148,17 +152,6 @@ for (var i = 0; i < z; i++) {
      }
   });
 };
-
-/*for (var i = 0; i < popupBtn.length; i++) {
-  popupBtn[i].addEventListener("click", function(event) {
-
-    event.preventDefault();
-
-    showPopup();
-
-  });
-}
-*/
 
 for (var i = 0; i < close.length; i++) {
 
@@ -201,7 +194,7 @@ winPopup.addEventListener("click", function(event) {
 		var th = $(this);
 		$.ajax({
 			type: "POST",
-			url: "http://pro-tour.by/mail.php", //Change
+			url: "http://proliving.ru/mail.php", //Change
 			data: th.serialize()
 		}).done(function() {
 			showThank();

@@ -59,7 +59,7 @@ $materials = get_posts(
 				<p>
 					<?php echo get_field('title-description' ); ?>
 				</p>
-				<a class="order-btn" href="#">Оставить заявку</a>
+				<a class="order-btn cloud-link" href="#">Оставить заявку</a>
 			</div>
 		</div>
 	</section>
@@ -169,7 +169,7 @@ $materials = get_posts(
 			<form method="post">
 				<input id="name" type="text" name="name" placeholder="Ваше имя">
 				<input type="text" name="phone" placeholder="Ваш номер телефона">
-				<button type="button" name="button">Заказать звонок</button>
+				<button class="cloud-link" class="cloud-link" type="button" name="button">Заказать звонок</button>
 			</form>
 		</div>
 	</section>
@@ -219,7 +219,7 @@ $materials = get_posts(
 			<form class="" method="post">
 				<input id="name" type="text" name="name" placeholder="Ваше имя">
 				<input type="text" name="phone" placeholder="Ваш номер телефона">
-				<button type="button" name="button">Получить скидку</button>
+				<button class="cloud-link" type="button" name="button">Получить скидку</button>
 			</form>
 		</div>
 	</section>
@@ -257,7 +257,7 @@ $materials = get_posts(
 			<form class="" method="post">
 				<input id="name" type="text" name="name" placeholder="Ваше имя">
 				<input type="text" name="phone" placeholder="Ваш номер телефона">
-				<button type="button" name="button">Заказать консультацию</button>
+				<button class="cloud-link" type="button" name="button">Заказать консультацию</button>
 			</form>
 		</div>
 	</section>
