@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Главная
+ * Template Name: Мебель из массива
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
@@ -42,7 +42,7 @@ $materials = get_posts(
 				'exclude' => '',
 				'meta_key' => '',
 				'meta_value' => '',
-				'post_type' => 'materials',
+				'post_type' => 'mmaterials',
 				'post_parent' => '',
 				'post_status' => 'publish'
 		)
@@ -50,7 +50,7 @@ $materials = get_posts(
 ?>
 
 <main>
-	<section class="main block-1">
+	<section class="main block-1 massive">
 		<div class="container">
 			<div class="title-box">
 				<h1>

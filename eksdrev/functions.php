@@ -245,6 +245,11 @@ require get_template_directory() . '/inc/clients.php';
 require get_template_directory() . '/inc/materials.php';
 
 /**
+ * require materials massive.
+ */
+require get_template_directory() . '/inc/mmaterials.php';
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';

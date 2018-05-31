@@ -3,7 +3,7 @@ $(document).ready(function() {
   $('.clients__slider').slick({
   dots: true,
   infinite: false,
-  speed: 300,
+  speed: 600,
   slidesToShow: 4,
   slidesToScroll: 4,
   responsive: [
@@ -40,8 +40,8 @@ $('.materials__slider-box').slick({
   dots: true,
   infinite: true,
   autoplay: true,
-  autoplaySpeed: 1000,
-  speed: 500,
+  autoplaySpeed: 2000,
+  speed: 1000,
   fade: true,
   cssEase: 'linear'
 });
