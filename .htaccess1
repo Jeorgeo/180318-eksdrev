@@ -1,0 +1,25 @@
+
+
+php_value error_reporting 0 
+RewriteEngine On
+RewriteBase /
+
+
+# Страницы контента
+RewriteRule ^index\.php$ - [L]
+RewriteRule ^inf\.php$ - [L]
+RewriteRule ^pdf\.php$ - [L]
+RewriteRule ^action_mail\.php$ - [L]
+RewriteRule ^favicon\.ico$ - [L]
+RewriteRule ^control/index\.php$ - [L]
+RewriteRule ^css/$ - [L]
+RewriteRule ^includes/$ - [L]
+RewriteRule ^fonts/$ - [L]
+RewriteRule ^img/$ - [L]
+RewriteRule ^js/$ - [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /index.php?page=$1 [L]
+
+
